@@ -19,7 +19,6 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.ltrsoft.andromotapp.modelclasses.User_Detail;
 import com.ltrsoft.andromotapp.R;
 
 import java.util.List;
@@ -31,7 +30,6 @@ public class NavigationDrawer extends Fragment {
     TextView hname;
     ImageView profilepic;
     Toolbar toolbar;
-    List<User_Detail> list;
     private BottomNavigationView bottomNavigationView;
     String url = "https://andromot.ltr-soft.com";
 

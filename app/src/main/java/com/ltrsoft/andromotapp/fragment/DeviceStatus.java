@@ -9,18 +9,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.ltrsoft.andromotapp.modelclasses.User_Crop_Sensor_Pojo;
+
 import com.ltrsoft.andromotapp.R;
-import com.ltrsoft.andromotapp.adapter.DeviceStatusAdapter;
 
 import java.util.List;
 
 public class DeviceStatus extends Fragment {
-
-    RecyclerView statusrecycler;
-    List<User_Crop_Sensor_Pojo>sensorList;
-    DeviceStatusAdapter statusAdapter ;
-    public static String url="https://andromot.ltr-soft.com";
 
     public DeviceStatus() {
         // Required empty public constructor
