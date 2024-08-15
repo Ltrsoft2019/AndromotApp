@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">AndromotApp</string>
+    <string name="app_name">Andromot</string>
+
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
 </resources>
