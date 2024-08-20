@@ -8,4 +8,25 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="hello_blank_fragment">hello_blank_fragment</string>
+
+    //this strings required for recylerView....
+    <string name="crop_image">crop image</string>
+    <string name="device_name">Device Name :</string>
+    <string name="crop_name">Crop Name :</string>
+    <string name="product_image">Product Image</string>
+    <string name="product_name">Product Name</string>
+    <string name="addcropimage">addCropImage</string>
+    <string name="crop_description">Crop Description</string>
+    <string name="add_client_image">Add Client Image</string>
+    <string name="client_name">Client Name</string>
+    <string name="description">Description :</string>
+    <string name="client_description">Client Description</string>
+    <string name="server_image">Server Image</string>
+    <string name="server_name">Server Name</string>
+    <string name="server_description">Server Description</string>
+    <string name="product_id">Product Id :</string>
+    <string name="product_ids">Product Id</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="service_id">Service Id</string>
+    <string name="status_on_of">Status ON/OF :</string>
 </resources>
