@@ -15,7 +15,7 @@ public interface Admin_api {
     @FormUrlEncoded
     @POST("create_admin.php")
     Call<Admin> create_Admin(
-            @Field("admin_id") int admin_id,
+            @Field("admin_id") String admin_id,
             @Field("admin_fname") String admin_fname,
             @Field("admin_mname") String admin_mname,
             @Field("admin_lname") String admin_lname,
@@ -26,13 +26,13 @@ public interface Admin_api {
             @Field("email_id") String  email_id,
             @Field("password") String  password,
             @Field("address") String address,
-            @Field("mobile1") int mobile1,
-            @Field(" mobile2") int  mobile2
+            @Field("mobile1") String mobile1,
+            @Field(" mobile2") String  mobile2
     );
     @FormUrlEncoded
     @POST("update_admin.php")
     Call<Admin> update_Admin(
-            @Field("admin_id") int admin_id,
+            @Field("admin_id")String admin_id,
             @Field("admin_fname") String admin_fname,
             @Field("admin_mname") String admin_mname,
             @Field("admin_lname") String admin_lname,
@@ -43,19 +43,19 @@ public interface Admin_api {
             @Field("email_id") String  email_id,
             @Field("password") String  password,
             @Field("address") String    address,
-            @Field("mobile1") int   mobile1,
-            @Field(" mobile2") int    mobile2
+            @Field("mobile1") String   mobile1,
+            @Field(" mobile2") String    mobile2
     );
     @GET("read_admin_by_id.php")
     Call<Admin> read_by_id_Admin(
-            @Field("admin_id") int admin_id
+            @Field("admin_id") String admin_id
     );
     @GET("readall_admin.php")
     Call<List<Admin>> read_all_Admin();
 
     @POST(" ")        //messing delete php file
     Call<Admin> delete_by_id_Admin(
-            @Field("admin_id") int admin_id
+            @Field("admin_id") String admin_id
     );
 }
 

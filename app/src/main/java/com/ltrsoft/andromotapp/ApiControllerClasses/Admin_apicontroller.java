@@ -1,4 +1,4 @@
-package com.ltrsoft.andromotapp.ApiControllerclasses;
+package com.ltrsoft.andromotapp.ApiControllerClasses;
 
 import com.ltrsoft.andromotapp.apimodelclasses.Admin_api;
 
