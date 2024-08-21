@@ -18,7 +18,7 @@ public interface Crop_Details_api {
             @Field("crop_name") String crop_name ,
             @Field("description") String description ,
             @Field("required_threshold_value") String  required_threshold_value,
-            @Field(" crop_image") int  client_description
+            @Field(" crop_image") String  client_description
     );
     @FormUrlEncoded
     @POST("update_crop_detail.php")
@@ -26,7 +26,7 @@ public interface Crop_Details_api {
             @Field("crop_name") String crop_name ,
             @Field("description") String description ,
             @Field("required_threshold_value") String  required_threshold_value,
-            @Field(" crop_image") int  client_description,
+            @Field(" crop_image") String  client_description,
             @Field("crop_id") int  crop_id
     );
     @POST("delete_crop_detail.php")
