@@ -27,19 +27,23 @@ public interface Crop_Details_api {
             @Field("description") String description ,
             @Field("required_threshold_value") String  required_threshold_value,
             @Field(" crop_image") String  client_description,
-            @Field("crop_id") int  crop_id
+            @Field("crop_id") String  crop_id
     );
+    @FormUrlEncoded
     @POST("delete_crop_detail.php")
     Call<Crop_Details> delete_Crop_Details(
             @Field("crop_id") int  crop_id
     );
-    @GET("id_crop_detail.php")
+    @FormUrlEncoded
+    @POST("id_crop_detail.php")
     Call<Crop_Details> read_by_id_Crop_Details(
-            @Field("crop_id") int  crop_id
+            @Field("crop_id") int crop_id
     );
+    @FormUrlEncoded
     @GET("read_crop_detail.php")
     Call<List<Crop_Details>> read_Crop_Details();
 
+    @FormUrlEncoded
     @GET("recent_crop.php")
     Call<List<Crop_Details>> recent_Crop_Details();
 }

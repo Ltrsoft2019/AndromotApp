@@ -1,13 +1,14 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
 public class Crop_Details {
-    String crop_id,crop_name, description, required_threshold_value,device_name;
+    int crop_id;
+    String crop_name, description, required_threshold_value,device_name;
     int crop_image;
 
     public Crop_Details() {
     }
 
-    public Crop_Details(String crop_id, String crop_name, String description, int crop_image, String required_threshold_value) {
+    public Crop_Details(int crop_id, String crop_name, String description, int crop_image, String required_threshold_value) {
         this.crop_id = crop_id;
         this.crop_name = crop_name;
         this.description = description;
@@ -27,11 +28,11 @@ public class Crop_Details {
 //        this.crop_image = crop_image;
 //    }
 
-    public String getCrop_id() {
+    public int getCrop_id() {
         return crop_id;
     }
 
-    public void setCrop_id(String crop_id) {
+    public void setCrop_id(int crop_id) {
         this.crop_id = crop_id;
     }
 

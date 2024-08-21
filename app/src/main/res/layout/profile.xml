@@ -36,32 +36,31 @@
         </LinearLayout>
 
 
-        <EditText
+        <TextView
         android:id="@+id/fullname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:ems="10"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:ems="20"
         android:hint="Name"
-        android:inputType="none"
+        android:inputType="text"
         android:gravity="center_vertical"
         android:padding="10dp"
         android:background="@drawable/edit"/>
 
-    <EditText
+    <TextView
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="20dp"
-        android:ems="10"
+        android:ems="30"
         android:padding="10dp"
         android:background="@drawable/edit"
         android:hint="Email"
         android:gravity="center_vertical"
         android:inputType="textEmailAddress"/>
 
-    <EditText
+    <TextView
         android:id="@+id/mobile"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -74,24 +73,20 @@
         android:gravity="center_vertical"/>
 
 
-    <EditText
+    <TextView
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="20dp"
-        android:ems="10"
+        android:ems="50"
         android:hint="Address"
         android:inputType="text"
         android:padding="10dp"
         android:gravity="center_vertical"
         android:background="@drawable/edit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/country"
-        app:layout_constraintVertical_bias="0.0" />
+        />
 
-    <EditText
+    <TextView
         android:id="@+id/city"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -103,7 +98,7 @@
         android:background="@drawable/edit"
         android:gravity="center_vertical"/>
 
-    <EditText
+    <TextView
         android:id="@+id/district"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -114,14 +109,9 @@
         android:hint="district"
         android:inputType="text"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile"
-        app:layout_constraintVertical_bias="0.238" />
+        />
 
-    <EditText
+    <TextView
         android:id="@+id/state"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -133,7 +123,7 @@
         android:inputType="text"
         android:gravity="center_vertical"/>
 
-    <EditText
+    <TextView
         android:id="@+id/country"
         android:layout_width="match_parent"
         android:layout_height="50dp"

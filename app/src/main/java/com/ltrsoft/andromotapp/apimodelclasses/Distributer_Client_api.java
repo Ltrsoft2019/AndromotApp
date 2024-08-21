@@ -12,6 +12,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 //already created by kaif
+
 public interface Distributer_Client_api {
     @FormUrlEncoded
     @POST("create_distributer_client.php")

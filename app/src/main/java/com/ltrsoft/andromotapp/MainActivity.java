@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.ltrsoft.andromotapp.fragment.CurrentCrop_Detail;
 import com.ltrsoft.andromotapp.fragment.Login;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,9 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Login login = new Login();
-        getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
+       // Login login = new Login();
+        //getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container,new CurrentCrop_Detail());
+        fragmentTransaction.commit();
 
     }
 }
