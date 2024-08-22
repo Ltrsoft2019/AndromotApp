@@ -6,18 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
 
 
 import com.ltrsoft.andromotapp.R;
 
-import java.util.List;
-
-public class CurrentCrop extends Fragment {
+public class Crop_List extends Fragment {
 
 
-    public CurrentCrop() {
+    public Crop_List() {
         // Required empty public constructor
     }
 
