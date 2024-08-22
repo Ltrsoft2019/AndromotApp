@@ -23,6 +23,13 @@ public class Crop_Details {
         this.crop_image = crop_image;
     }
 
+    //This constructor use for "Add Crop" Recyclerview...
+    public Crop_Details(int crop_image , String crop_name, String description ) {
+        this.crop_image = crop_image;
+        this.crop_name = crop_name;
+        this.description = description;
+    }
+
     //    public Crop_Details( String crop_image,String crop_name) {
 //        this.crop_name = crop_name;
 //        this.crop_image = crop_image;

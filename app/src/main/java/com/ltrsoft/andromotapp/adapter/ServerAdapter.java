@@ -39,7 +39,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.cropImage.setImageResource(R.drawable.ll);
+        holder.cropImage.setImageResource(R.drawable.server);
         holder.tvServerName.setText(serverModelArrayList.get(position).getServer_name_id());
         holder.tvServerDescription.setText(serverModelArrayList.get(position).getServer_description());
         holder.tvDescription.setText("Description :");

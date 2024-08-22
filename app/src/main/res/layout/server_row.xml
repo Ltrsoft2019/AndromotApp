@@ -23,7 +23,7 @@
             android:layout_height="45dp"
             android:id="@+id/cropImageSr"
             android:layout_gravity="start"
-            android:src="@drawable/ll"
+            android:src="@drawable/server"
             android:scaleType="centerCrop"
             android:contentDescription="@string/server_image"
             android:layout_marginTop="20dp"

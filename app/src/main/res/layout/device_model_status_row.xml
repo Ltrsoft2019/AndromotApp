@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--This layout made for severs recycler view-->
+
+<!--This layout made for sensor recycler view-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -16,6 +17,7 @@
         app:cardElevation="7dp"
         app:contentPadding="11dp"
         app:cardCornerRadius="7dp"
+        android:layout_margin="10dp"
         >
 
 <!--Left side fields-->
