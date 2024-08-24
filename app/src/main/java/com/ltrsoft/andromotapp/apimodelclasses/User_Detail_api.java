@@ -10,10 +10,11 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface User_Detail_api {
     @FormUrlEncoded
-    @POST("create_user_detail.php")
+    @POST("user_detail/create_user_detail.php")
     Call<User_Detail> create_User_Detail(
             @Field("user_fname") String user_fname,
             @Field(" user_mname") String  user_mname,
@@ -28,7 +29,7 @@ public interface User_Detail_api {
 
     );
     @FormUrlEncoded
-    @POST("update_user_detail.php")
+    @POST("user_detail/update_user_detail.php")
     Call<User_Detail> update_User_Detail(
             @Field("user_id") int user_id,
             @Field("user_fname") String user_fname,
@@ -44,16 +45,17 @@ public interface User_Detail_api {
             @Field("user_image") int user_image
 
     );
-    @POST("delete_user_detail.php")
+    @FormUrlEncoded
+    @POST("user_detail/delete_user_detail.php")
     Call<User_Detail> delete_User_Detail(
             @Field("user_id") int user_id
     );
-    @GET("read_user_id.php")
-    Call<User_Detail> read_by_id_User_Detail(
-            @Field("user_id") int user_id
+    @GET("user_detail/read_user_id.php")
+    Call<List<User_Detail>> read_by_id_User_Detail(
+            @Query("user_id") int user_id
     );
-    @GET("read_user_detail.php")
-    Call <List<User_Detail>> readall_User_Detail();
+    @GET("user_detail/read_user_detail.php")
+    Call<List<User_Detail>> readall_User_Detail();
 }
 
 

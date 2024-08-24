@@ -1,14 +1,25 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Crop_Details {
+    @SerializedName("crop_id")
     int crop_id;
-    String crop_name, description, required_threshold_value,device_name;
-    int crop_image;
+    @SerializedName("crop_name")
+    String crop_name;
+    @SerializedName("description")
+    String description;
+    @SerializedName("required_threshold_value")
+    String required_threshold_value;
+    @SerializedName("device_name")
+    String device_name;
+    @SerializedName("crop_image")
+    String crop_image;
 
     public Crop_Details() {
     }
 
-    public Crop_Details(int crop_id, String crop_name, String description, int crop_image, String required_threshold_value) {
+    public Crop_Details(int crop_id, String crop_name, String description, String crop_image, String required_threshold_value) {
         this.crop_id = crop_id;
         this.crop_name = crop_name;
         this.description = description;
@@ -17,7 +28,7 @@ public class Crop_Details {
     }
 
     //This constructor use for "Crop_Suggestion" Recyclerview...
-    public Crop_Details(String crop_name, String device_name, int crop_image) {
+    public Crop_Details(String crop_name, String device_name, String crop_image) {
         this.crop_name = crop_name;
         this.device_name = device_name;
         this.crop_image = crop_image;
@@ -56,11 +67,11 @@ public class Crop_Details {
         return required_threshold_value;
     }
 
-    public int getCrop_image() {
+    public String getCrop_image() {
         return crop_image;
     }
 
-    public void setCrop_image(int crop_image) {
+    public void setCrop_image(String crop_image) {
         this.crop_image = crop_image;
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -17,11 +17,10 @@
         >
 
         <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:id="@+id/addCropImage"
             android:layout_gravity="start"
-            android:src="@drawable/ll"
             android:scaleType="centerCrop"
             android:contentDescription="@string/addcropimage"
             android:layout_margin="10dp"
@@ -40,7 +39,7 @@
                 android:text="@string/crop_name"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:layout_marginStart="65dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginTop="21dp"
                 android:layout_marginBottom="11dp"
                 />
@@ -52,9 +51,15 @@
                 android:text="@string/crop_description"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="11dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TH value:"
+                android:id="@+id/required_threshold_value"
                 />
 
 

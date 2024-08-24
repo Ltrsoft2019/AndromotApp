@@ -21,8 +21,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.ltrsoft.andromotapp.R;
 
-import java.util.List;
-
 
 public class NavigationDrawer extends Fragment {
     private DrawerLayout drawerLayout;
@@ -121,7 +119,7 @@ public class NavigationDrawer extends Fragment {
                     loadFragment(status);
                 }
                 else if (id==R.id.currentcrop) {
-                    CurrentCrop currentCrop = new CurrentCrop();
+                    Crop_List currentCrop = new Crop_List();
                     loadFragment(currentCrop);
                 }
                 return true;
