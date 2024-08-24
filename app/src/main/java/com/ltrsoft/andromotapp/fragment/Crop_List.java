@@ -17,7 +17,6 @@ import com.ltrsoft.andromotapp.apimodelclasses.Crop_Details_api;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
 import com.ltrsoft.andromotapp.utils.RetrofitClient;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -40,7 +39,7 @@ public class Crop_List extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.current_crop, container, false);
+        View view = inflater.inflate(R.layout.crop_list, container, false);
 
         //recycler
         recyclerView = view.findViewById(R.id.crop_recycler);
