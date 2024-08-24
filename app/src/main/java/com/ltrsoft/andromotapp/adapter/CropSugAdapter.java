@@ -38,7 +38,7 @@ public class CropSugAdapter extends RecyclerView.Adapter<CropSugAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.cropImage.setImageResource(cropModelArrayList.get(position).getCrop_image());
+       // holder.cropImage.setImageResource(cropModelArrayList.get(position).getCrop_image());
         holder.tvCropName.setText(cropModelArrayList.get(position).getCrop_name());
         holder.tvDeviceName.setText(cropModelArrayList.get(position).getDevice_name());
         holder.cropSuggestion_card.setOnClickListener(new View.OnClickListener() {

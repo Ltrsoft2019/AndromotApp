@@ -11,6 +11,8 @@ import com.ltrsoft.andromotapp.R;
 
 public class RegisterPage extends Fragment {
 
+
+
     public RegisterPage() {
         // Required empty public constructor
     }
@@ -19,6 +21,8 @@ public class RegisterPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.register_page, container, false);
+        View view = inflater.inflate(R.layout.register_page, container, false);
+
+        return view;
     }
 }

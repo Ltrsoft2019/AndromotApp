@@ -14,8 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
+import com.squareup.picasso.OkHttp3Downloader;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHolder> {
 
@@ -23,13 +26,14 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
     //This model class made for add crop recycler view for user application
 
     private Context context;
-    private ArrayList<Crop_Details> addCropModelArrayList ;
+    private List<Crop_Details> addCropModelList ;
 
-    public AddCropAdapter(Context context , ArrayList<Crop_Details> addCropModelArrayList)
+    public AddCropAdapter(Context context , List<Crop_Details> addCropModelList)
     {
         this.context = context;
-        this.addCropModelArrayList = addCropModelArrayList;
+        this.addCropModelList = addCropModelList;
     }
+
 
     @NonNull
     @Override
@@ -40,36 +44,59 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.addCropImage.setImageResource(addCropModelArrayList.get(position).getCrop_image());
-        holder.tvAddCropName.setText(addCropModelArrayList.get(position).getCrop_name());
-        holder.tvAddCropDescription.setText(addCropModelArrayList.get(position).getDescription());
+        Crop_Details cropDetails = addCropModelList.get(position);
 
-        holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
+        holder.tvAddCropName.setText(addCropModelList.get(position).getCrop_name());
+        holder.tvAddCropDescription.setText(addCropModelList.get(position).getDescription());
+        holder.required_threshold_value.setText(addCropModelList.get(position).getRequired_threshold_value());
+
+
+        //commented for testing
+       /* holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Add crop next page`", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
+        // Load crop image using Picasso
+
+
+        String imageUrl = "https://andromot.ltr-soft.com/public/andromot/inputfiles/"+ cropDetails.getCrop_image();
+        Picasso.get().load(imageUrl).into(holder.addCropImage);
+
+        Picasso.get()
+                .load(imageUrl)
+                .placeholder(R.drawable.ic_launcher_background) // Placeholder image
+                .error(R.drawable.ic_launcher_background)       // Error image
+                .into(holder.addCropImage);
+
 
     }
 
     @Override
     public int getItemCount() {
-        return addCropModelArrayList.size();
+        return addCropModelList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private ImageView addCropImage;
-        private TextView tvAddCropName , tvAddCropDescription;
+   public class ViewHolder extends RecyclerView.ViewHolder{
+
+        public final View mView;
+
+        public ImageView addCropImage;
+        private TextView tvAddCropName , tvAddCropDescription,required_threshold_value;
         private CardView addCrop_card;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            addCropImage = itemView.findViewById(R.id.addCropImage);
-            tvAddCropName = itemView.findViewById(R.id.tvAddCropName);
-            tvAddCropDescription = itemView.findViewById(R.id.tvAddCropDescription);
-            addCrop_card = itemView.findViewById(R.id.addCrop_card);
+            mView = itemView;
+
+            addCropImage = mView.findViewById(R.id.addCropImage);
+            tvAddCropName = mView.findViewById(R.id.tvAddCropName);
+            tvAddCropDescription = mView.findViewById(R.id.tvAddCropDescription);
+            required_threshold_value = mView.findViewById(R.id.required_threshold_value);
+            //addCrop_card = itemView.findViewById(R.id.addCrop_card);
         }
     }
+
 }

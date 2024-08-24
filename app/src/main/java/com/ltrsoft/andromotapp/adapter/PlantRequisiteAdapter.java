@@ -40,7 +40,7 @@ public class PlantRequisiteAdapter extends RecyclerView.Adapter<PlantRequisiteAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.cropImage.setImageResource(cropSugModelArrayList.get(position).getCrop_image());
+        //holder.cropImage.setImageResource(cropSugModelArrayList.get(position).getCrop_image());
         holder.tvCropName.setText(cropSugModelArrayList.get(position).getCrop_name());
         holder.tvDeviceName.setText(cropSugModelArrayList.get(position).getDevice_name());
         holder.tvStatus.setText("Ready");

@@ -1,23 +1,23 @@
 package com.ltrsoft.andromotapp.utils;
 
+import com.ltrsoft.andromotapp.apimodelclasses.Crop_Details_api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static String baseUrl ="https://andromot.ltr-soft.com/public/andromot/";
+    private static final String BASE_URL = "https://andromot.ltr-soft.com/public/andromot/";
+    private static Retrofit retrofit;
 
-    private static Retrofit instance=null;
-    public static Retrofit getInstance(String baseUrl){
-        if (instance == null) {
-            instance = new Retrofit.Builder()
-                    .baseUrl(baseUrl)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    //.addConverterFactory(FormUrlEncodedConverter.create())
-                    .build();
+public static Retrofit getRetrofitInstance(){
 
-        }
-        return instance;
+    if(retrofit == null){
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
     }
+    return retrofit;
+}
 }

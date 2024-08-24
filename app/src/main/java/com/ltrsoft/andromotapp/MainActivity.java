@@ -10,10 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.ltrsoft.andromotapp.fragment.AddCrop;
-import com.ltrsoft.andromotapp.fragment.AddCrop_Detail;
 import com.ltrsoft.andromotapp.fragment.CurrentCrop_Detail;
-import com.ltrsoft.andromotapp.fragment.DeviceStatus;
 import com.ltrsoft.andromotapp.fragment.Login;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.demoFrag,new AddCrop_Detail());
+        fragmentTransaction.add(R.id.fragment_container,new CurrentCrop_Detail());
         fragmentTransaction.commit();
 
     }
