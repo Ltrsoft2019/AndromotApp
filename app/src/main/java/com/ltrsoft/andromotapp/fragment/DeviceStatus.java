@@ -24,7 +24,7 @@ public class DeviceStatus extends Fragment {
 
     private ImageView btnBackImage;
     private RecyclerView deviceModelRecylerView;
-    private ArrayList<User_Crop_Sensor_Pojo> deviceModelStatusArrayList = new ArrayList<User_Crop_Sensor_Pojo>();
+    private List<User_Crop_Sensor_Pojo> deviceModelStatusList ;
 
     public DeviceStatus() {
         // Required empty public constructor
@@ -39,20 +39,11 @@ public class DeviceStatus extends Fragment {
         btnBackImage = view.findViewById(R.id.btnBackImg);
         deviceModelRecylerView = view.findViewById(R.id.deviceModelRecylerView);
 
-        deviceModelRecylerView.setLayoutManager(new LinearLayoutManager(getContext() , LinearLayoutManager.VERTICAL , false));
+        deviceModelRecylerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
-        deviceModelStatusArrayList.add(new User_Crop_Sensor_Pojo("Sensor 1" , "Soya" , "ON"));
 
-        deviceModelRecylerView.setAdapter(new DeviceModelStatusAdapter(getContext() , deviceModelStatusArrayList));
+
+
 
 
 

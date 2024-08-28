@@ -16,7 +16,7 @@ public interface Client_List_api {
     @POST("create_client_list.php")
     Call<Client_List> create_Client_List(
             @Field("client_name_id") String client_name_id ,
-            @Field("client_manufacture_date") int client_manufacture_date ,
+            @Field("client_manufacture_date") String  client_manufacture_date ,
             @Field("client_status") String  client_status,
             @Field(" client_description") String  client_description
     );
@@ -25,7 +25,7 @@ public interface Client_List_api {
     Call<Client_List> update_Client_List(
             @Field("client_id") int client_id ,
             @Field("client_name_id") String client_name_id ,
-            @Field("client_manufacture_date") int client_manufacture_date ,
+            @Field("client_manufacture_date") String  client_manufacture_date ,
             @Field("client_status") String  client_status,
             @Field(" client_description") String  client_description
     );
@@ -34,8 +34,10 @@ public interface Client_List_api {
             @Field("client_id") int client_id
     );
 
-    @GET("readall_client_list.php")
-    Call<List<Client_List>> readall_Client_List();
+    @GET("client_list/readall_client_list.php")
+    Call<List<Client_List>> readall_Client_List(
+
+    );
 
     @POST("delete_client_list.php")
     Call<Client_List> delete_Client_List(

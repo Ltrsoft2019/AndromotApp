@@ -16,18 +16,19 @@ import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.pojoclasses.Server_List;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder> {
 
     //This adapter made for add Server recylerview ...
 
     private Context context;
-    private ArrayList<Server_List> serverModelArrayList;
+    private List<Server_List> serverModelList;
 
-    public ServerAdapter(Context context, ArrayList<Server_List> serverModelArrayList)
+    public ServerAdapter(Context context, List<Server_List> serverModelList)
     {
         this.context = context;
-        this.serverModelArrayList = serverModelArrayList;
+        this.serverModelList = serverModelList;
     }
 
     @NonNull
@@ -40,8 +41,8 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.cropImage.setImageResource(R.drawable.server);
-        holder.tvServerName.setText(serverModelArrayList.get(position).getServer_name_id());
-        holder.tvServerDescription.setText(serverModelArrayList.get(position).getServer_description());
+        holder.tvServerName.setText(serverModelList.get(position).getServer_name_id());
+        holder.tvServerDescription.setText(serverModelList.get(position).getServer_description());
         holder.tvDescription.setText("Description :");
         holder.serverCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +55,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return serverModelArrayList.size();
+        return serverModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

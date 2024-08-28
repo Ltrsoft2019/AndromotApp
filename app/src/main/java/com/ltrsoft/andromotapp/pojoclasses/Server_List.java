@@ -1,10 +1,18 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Server_List {
 
     private int server_id;
+
+    @SerializedName("server_name_id")
     private String server_name_id;
+
+    @SerializedName("server_manufacture_date")
     private String server_manufacture_date;
+
+    @SerializedName("server_description")
     private String server_description;
 
     public Server_List(int server_id, String server_name_id, String server_manufacture_date, String server_description) {

@@ -10,8 +10,14 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.ltrsoft.andromotapp.fragment.AddCrop;
+import com.ltrsoft.andromotapp.fragment.AddCrop_Detail;
+import com.ltrsoft.andromotapp.fragment.Client_List_Fragment;
 import com.ltrsoft.andromotapp.fragment.CurrentCrop_Detail;
+import com.ltrsoft.andromotapp.fragment.DeviceStatus;
+import com.ltrsoft.andromotapp.fragment.Device_List;
 import com.ltrsoft.andromotapp.fragment.Login;
+import com.ltrsoft.andromotapp.pojoclasses.Server_List;
 
 public class MainActivity extends AppCompatActivity {
 
