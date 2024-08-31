@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "115744441590",
+      "project_id": "andromotapp-cc61b",
+      "storage_bucket": "andromotapp-cc61b.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:115744441590:android:241143492f3906b64058d7",
+          "android_client_info": {
+            "package_name": "com.ltrsoft.andromotapp"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyA5Op30ZqsKtw82mHRhytCWyV3RShr8MqY"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

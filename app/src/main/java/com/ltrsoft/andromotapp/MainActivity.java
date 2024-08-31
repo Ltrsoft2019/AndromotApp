@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Login login = new Login();
-        getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
+       // Login login = new Login();
+        //getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
 
         // Check for camera permission
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
