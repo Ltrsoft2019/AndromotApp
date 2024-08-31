@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-       // Login login = new Login();
-        //getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
+        Login login = new Login();
+        getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
