@@ -42,7 +42,7 @@ public class RegisterPage extends Fragment {
         userFirstName = view.findViewById(R.id.firstNameReg);
         userMiddleName = view.findViewById(R.id.middleNameReg);
         userLastName = view.findViewById(R.id.lastNameReg);
-        // userEmail = view.findViewById(R.id.emailReg);
+        userEmail = view.findViewById(R.id.emailReg);
         userPhone = view.findViewById(R.id.phoneReg);
         userAddress = view.findViewById(R.id.addressReg);
         userCity = view.findViewById(R.id.cityReg);
@@ -60,7 +60,7 @@ public class RegisterPage extends Fragment {
                 user_fname = userFirstName.getText().toString();
                 user_mname = userMiddleName.getText().toString();
                 user_lname = userLastName.getText().toString();
-                //Email = userEmail.getText().toString();  //not available in db
+                Email = userEmail.getText().toString();
                 user_phone = userPhone.getText().toString();
                 user_address = userAddress.getText().toString();
                 city = userCity.getText().toString();
