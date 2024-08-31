@@ -65,7 +65,17 @@ dependencies {
     implementation("com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0")
 
 
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation ("com.google.zxing:core:3.3.0")
 
 
+
+   /* implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")*/
+
+    /*implementation ("com.androidplot:androidplot-core:1.5.8")*/
+
+   // implementation ("com.jjoe64:graphview:4.2.2")
+
+   // implementation ("com.anychart:anychart-android:1.1.2")
 
 }

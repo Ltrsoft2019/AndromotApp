@@ -33,4 +33,8 @@
     <string name="back_button_image">Back Button Image</string>
     <string name="add_crop">Add Crop :</string>
     <string name="refresh_icon">Refresh Icon</string>
+
+
+    <string name="select_an_option">Select an option</string>
+
 </resources>

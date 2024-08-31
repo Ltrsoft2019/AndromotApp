@@ -2,3 +2,21 @@
 plugins {
     alias(libs.plugins.android.application) apply false
 }
+
+/*dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("gradle/libs.versions.toml"))
+        }
+    }
+}*/
+
+
+/*
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+*/

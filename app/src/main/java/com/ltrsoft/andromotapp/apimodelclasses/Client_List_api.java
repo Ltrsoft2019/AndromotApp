@@ -18,7 +18,7 @@ public interface Client_List_api {
             @Field("client_name_id") String client_name_id ,
             @Field("client_manufacture_date") String  client_manufacture_date ,
             @Field("client_status") String  client_status,
-            @Field(" client_description") String  client_description
+            @Field("client_description") String  client_description
     );
     @FormUrlEncoded
     @POST("update_client_list.php")
