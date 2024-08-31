@@ -13,7 +13,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragment_container"
-        />
+        >
+<!--        <fragment-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:id="@+id/demoFrag"-->
+<!--            android:name="com.ltrsoft.andromotapp.fragment.Device_List"-->
+<!--            />-->
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,15 @@ public class User_Crop_Sensor_Pojo {
         this.user_crop_sensor_id = user_crop_sensor_id;
     }
 
+    //This constructor made for device model status recycler view
+
+    public User_Crop_Sensor_Pojo(String sensor_name_id , String crop_name , String sensor_status)
+    {
+        this.crop_name = crop_name;
+        this.sensor_name_id = sensor_name_id;
+        this.sensor_status = sensor_status;
+    }
+
     public String getUser_id() {
         return user_id;
     }

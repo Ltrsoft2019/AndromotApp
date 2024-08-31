@@ -29,4 +29,8 @@
     <string name="customer_name">Customer Name</string>
     <string name="service_id">Service Id</string>
     <string name="status_on_of">Status ON/OF :</string>
+    <string name="device_modal_status">Device Modal Status :</string>
+    <string name="back_button_image">Back Button Image</string>
+    <string name="add_crop">Add Crop :</string>
+    <string name="refresh_icon">Refresh Icon</string>
 </resources>

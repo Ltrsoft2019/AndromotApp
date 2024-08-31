@@ -1,14 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.AddCrop_Detail">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+
+
+    <ImageView
+        android:id="@+id/btnBackImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/back_button_image"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/btnRefresh"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/refresh_icon"
+        android:src="@drawable/baseline_refresh_24"
+        android:layout_margin="20dp"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@+id/btnRefresh"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+    <ImageView
+        android:id="@+id/cropImag"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:src="@drawable/soyabin2"
+        android:layout_centerHorizontal="true"
+        />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/cropImag"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvCropNameDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@id/cropImag"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="200dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/tvCropNameDet"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvCropDescDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@id/tvCropNameDet"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TH Value :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/tvCropDescDet"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="15dp"
+            />
+
+    <TextView
+        android:id="@+id/tvTHValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@id/tvCropDescDet"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device Name :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/tvTHValue"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <Spinner
+        android:id="@+id/deviceNameSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="11dp"
+        android:layout_below="@id/tvTHValue"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Water Level :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@+id/deviceNameSpinner"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvWaterLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@+id/deviceNameSpinner"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@+id/tvWaterLevel"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@+id/tvWaterLevel"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nitrogen Value :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@+id/tvTemperature"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvNValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@+id/tvTemperature"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phosphorus Value :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/tvNValue"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvPValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@id/tvNValue"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Potassium Value :"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:layout_below="@id/tvPValue"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+
+    <TextView
+        android:id="@+id/tvKValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="normal"
+        android:textSize="21sp"
+        android:layout_below="@id/tvPValue"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="11dp"
+        />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:backgroundTint="#34E0D0"
+                android:layout_below="@id/tvKValue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

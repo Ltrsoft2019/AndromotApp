@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Client_List_Fragment">
+
+
+    <ImageView
+        android:id="@+id/addClientBackImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/back_button_image"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/clientRefreshImag"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/refresh_icon"
+        android:src="@drawable/baseline_refresh_24"
+        android:layout_margin="20dp"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/tvClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clients :"
+        android:textStyle="bold"
+        android:textSize="31sp"
+        android:layout_below="@id/addClientBackImg"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/btnAddClient"
+        android:contentDescription="Add Client"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="#2DBCAE"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addClientRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvClient"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+
+
+</RelativeLayout>

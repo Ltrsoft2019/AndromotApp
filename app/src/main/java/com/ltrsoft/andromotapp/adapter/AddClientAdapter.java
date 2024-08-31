@@ -15,20 +15,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.pojoclasses.Client_List;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.ViewHolder> {
 
     //This adapter class made for add client recycler view in user appliction
 
     private Context context;
-    private ArrayList<Client_List> addClientModelArrayList ;
+    private List<Client_List> addClientModelList ;
 
-    public AddClientAdapter(Context context , ArrayList<Client_List> addClientModelArrayList)
+    public AddClientAdapter(Context context , List<Client_List> addClientModelList)
     {
         this.context = context;
-        this.addClientModelArrayList = addClientModelArrayList;
+        this.addClientModelList = addClientModelList;
     }
 
     @NonNull
@@ -40,8 +42,8 @@ public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.clientImage.setImageResource(R.drawable.ll);
-        holder.tvClientName.setText(addClientModelArrayList.get(position).getClient_name_id());
-        holder.tvClientDescription.setText(addClientModelArrayList.get(position).getClient_description());
+        holder.tvClientName.setText(addClientModelList.get(position).getClient_name_id());
+        holder.tvClientDescription.setText(addClientModelList.get(position).getClient_description());
         holder.tvdescription.setText("Description : ");
         holder.clientCardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,11 +51,23 @@ public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.View
                 Toast.makeText(context, "Open client scanner", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+//        String imageUrl = "https://andromot.ltr-soft.com/public/andromot/inputfiles/"+ cropDetails.getCrop_image();
+//        Picasso.get().load(imageUrl).into(holder.addCropImage);
+//
+//        Picasso.get()
+//                .load(imageUrl)
+//                .placeholder(R.drawable.ic_launcher_background) // Placeholder image
+//                .error(R.drawable.ic_launcher_background)       // Error image
+//                .into(holder.addCropImage);
+
+
     }
 
     @Override
     public int getItemCount() {
-        return addClientModelArrayList.size();
+        return addClientModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

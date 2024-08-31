@@ -46,9 +46,11 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
 
         Crop_Details cropDetails = addCropModelList.get(position);
 
+
         holder.tvAddCropName.setText(addCropModelList.get(position).getCrop_name());
         holder.tvAddCropDescription.setText(addCropModelList.get(position).getDescription());
-        holder.required_threshold_value.setText(addCropModelList.get(position).getRequired_threshold_value());
+        //holder.required_threshold_value.setText(addCropModelList.get(position).getRequired_threshold_value());
+
 
 
         //commented for testing
@@ -94,7 +96,7 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
             addCropImage = mView.findViewById(R.id.addCropImage);
             tvAddCropName = mView.findViewById(R.id.tvAddCropName);
             tvAddCropDescription = mView.findViewById(R.id.tvAddCropDescription);
-            required_threshold_value = mView.findViewById(R.id.required_threshold_value);
+            //required_threshold_value = mView.findViewById(R.id.required_threshold_value);
             //addCrop_card = itemView.findViewById(R.id.addCrop_card);
         }
     }

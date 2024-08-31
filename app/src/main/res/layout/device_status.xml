@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout make for show device modal status-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,108 +10,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    >
+    tools:ignore="UseCompoundDrawables">
 
-    <TextView android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Device Modal Status:"
-        android:textSize="30dp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/btnBackImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/back_button_image"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-
-    </TextView>
-
-    <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="30dp"
-        card_view:cardElevation="5dp"
-        android:layout_marginTop="60dp"
-        android:layout_gravity="center"
-        >
+      />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor Status :"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Device Name : "
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Device 1"
-                android:textSize="20sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_marginTop="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Crop Name: "
-                android:layout_marginTop="50dp"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Jawar"
-                android:layout_marginTop="50dp"
-
-                android:textSize="20sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Status ON/OF :"
-                android:layout_marginTop="80dp"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ON"
-                android:layout_marginTop="80dp"
-                android:layout_marginStart="9dp"
-                android:textSize="20sp"/>
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-
-
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/deviceModelRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>
 

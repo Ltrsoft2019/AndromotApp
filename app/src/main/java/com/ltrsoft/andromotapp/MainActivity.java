@@ -10,10 +10,14 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.ltrsoft.andromotapp.fragment.Crop_List;
+import com.ltrsoft.andromotapp.fragment.AddCrop;
+import com.ltrsoft.andromotapp.fragment.AddCrop_Detail;
+import com.ltrsoft.andromotapp.fragment.Client_List_Fragment;
 import com.ltrsoft.andromotapp.fragment.CurrentCrop_Detail;
+import com.ltrsoft.andromotapp.fragment.DeviceStatus;
+import com.ltrsoft.andromotapp.fragment.Device_List;
 import com.ltrsoft.andromotapp.fragment.Login;
-import com.ltrsoft.andromotapp.fragment.Profile;
+import com.ltrsoft.andromotapp.pojoclasses.Server_List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,16 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Login login = new Login();
-        getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
+       // Login login = new Login();
+        //getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
 
-
-        //testing the working of fragments
-        //FragmentManager fragmentManager = getSupportFragmentManager();
-       // FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-       // fragmentTransaction.add(R.id.fragment_container,new Profile());
-        //fragmentTransaction.addToBackStack(null); // Adds the transaction to the back stack
-        //fragmentTransaction.commit();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container,new CurrentCrop_Detail());
+        fragmentTransaction.commit();
 
     }
 }
