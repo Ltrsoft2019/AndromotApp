@@ -49,6 +49,7 @@ dependencies {
 
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation ("com.google.firebase:firebase-analytics:21.3.0")
 
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
@@ -78,5 +79,8 @@ dependencies {
    // implementation ("com.jjoe64:graphview:4.2.2")
 
    // implementation ("com.anychart:anychart-android:1.1.2")
+
+   // apply plugin: ("com.google.gms.google-services")
+
 
 }

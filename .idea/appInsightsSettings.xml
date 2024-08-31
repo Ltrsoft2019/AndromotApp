@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.ltrsoft.andromotapp" />
+                  <option name="mobileSdkAppId" value="1:115744441590:android:241143492f3906b64058d7" />
+                  <option name="projectId" value="andromotapp-cc61b" />
+                  <option name="projectNumber" value="115744441590" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

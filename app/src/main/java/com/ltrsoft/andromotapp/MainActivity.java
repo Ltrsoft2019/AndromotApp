@@ -24,6 +24,7 @@ import com.ltrsoft.andromotapp.fragment.DeviceStatus;
 import com.ltrsoft.andromotapp.fragment.Device_List;
 import com.ltrsoft.andromotapp.fragment.Login;
 import com.ltrsoft.andromotapp.fragment.NPK_Water_Detail;
+import com.ltrsoft.andromotapp.fragment.RegisterPage;
 import com.ltrsoft.andromotapp.fragment.ServerScan;
 import com.ltrsoft.andromotapp.pojoclasses.Server_List;
 
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_container,new Cock_ScanFragment());
+        fragmentTransaction.add(R.id.fragment_container,new RegisterPage());
         fragmentTransaction.commit();
 
     }
