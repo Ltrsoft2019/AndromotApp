@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-       // Login login = new Login();
-        //getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
+        Login login = new Login();
+        getSupportFragmentManager().beginTransaction().add(R.id.main,login).commit();
 
 
         //testing the working of fragments
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_container,new Profile());
+        //FragmentManager fragmentManager = getSupportFragmentManager();
+       // FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+       // fragmentTransaction.add(R.id.fragment_container,new Profile());
         //fragmentTransaction.addToBackStack(null); // Adds the transaction to the back stack
-        fragmentTransaction.commit();
+        //fragmentTransaction.commit();
 
     }
 }

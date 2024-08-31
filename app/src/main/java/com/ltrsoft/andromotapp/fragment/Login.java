@@ -1,5 +1,6 @@
 package com.ltrsoft.andromotapp.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -77,6 +78,8 @@ public class Login extends Fragment {
                                 OTP verifyOtpFragment = new OTP();
 
                                 // Create a bundle and set arguments
+
+
                                 Bundle bundle = new Bundle();
                                 bundle.putString("mobile", inputmobile.getText().toString());
                                 bundle.putString("verificationId", s);
