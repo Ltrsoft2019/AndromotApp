@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,7 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.apimodelclasses.User_Detail_api;
-import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
 import com.ltrsoft.andromotapp.pojoclasses.User_Detail;
 import com.ltrsoft.andromotapp.utils.RetrofitClient;
 import com.squareup.picasso.Picasso;
@@ -62,7 +60,7 @@ public class Profile extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationDrawer navigationDrawer = new NavigationDrawer();
+                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
                 getActivity().getSupportFragmentManager()
                         .beginTransaction().replace(R.id.main,navigationDrawer).commit();
             }

@@ -2,11 +2,12 @@ package com.ltrsoft.andromotapp.pojoclasses;
 
 public class User_Detail {
 
-    String user_id, user_fname, user_mname, user_lname, email_id, user_password, user_phone, user_address, state,
+    private int user_id;
+    private String  user_fname, user_mname, user_lname, email_id, user_password, user_phone, user_address, state,
             city, country, district, city_name, country_name, district_name, state_name;
-    String user_image;
+    private String user_image;
 
-    public User_Detail(String user_id, String user_fname, String user_mname, String user_lname, String email_id, String user_password, String user_phone, String user_address, String state, String city, String country, String district, String city_name, String country_name, String district_name, String state_name, String user_image) {
+    public User_Detail(int user_id, String user_fname, String user_mname, String user_lname, String email_id, String user_password, String user_phone, String user_address, String state, String city, String country, String district, String city_name, String country_name, String district_name, String state_name, String user_image) {
         this.user_id = user_id;
         this.user_fname = user_fname;
         this.user_mname = user_mname;
@@ -26,11 +27,25 @@ public class User_Detail {
         this.user_image = user_image;
     }
 
-    public String getUser_id() {
+    //This constructor made for share preference
+
+    public User_Detail(int id, String userFName, String userLName, String userEmail, String userPhone) {
+
+        this.user_id = id;
+        this.user_fname = userFName;
+        this.user_lname = userLName;
+        this.email_id = userEmail;
+        this.user_phone = userPhone;
+
+    }
+
+
+
+    public int getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(String user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 

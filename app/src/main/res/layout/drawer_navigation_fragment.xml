@@ -8,19 +8,19 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
     android:id="@+id/drawerlayout"
-    tools:context=".fragment.NavigationDrawer">
+    tools:context=".fragment.NavigationDrawerFragment">
 
-   <include layout="@layout/appbar"
+   <include layout="@layout/dashboard_toolbar"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 
    <com.google.android.material.navigation.NavigationView
+       android:id="@+id/drawerNavigationView"
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
        android:layout_gravity="start"
        android:fitsSystemWindows="true"
-       android:id="@+id/navigationview"
-       app:headerLayout="@layout/nav_header_main"
-       app:menu="@menu/navitems"/>
+       app:headerLayout="@layout/navigation_drawer_header_layout"
+       app:menu="@menu/nav_drawer_item"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

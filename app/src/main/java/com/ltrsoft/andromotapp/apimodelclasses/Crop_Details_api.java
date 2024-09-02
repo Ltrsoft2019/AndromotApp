@@ -58,6 +58,9 @@
         @GET("crop_detail/read_crop_detail.php")
         Call<List<Crop_Details>> read_Crop_Details();
 
+        @POST("crop_detail/readall_crop_detail.php")
+        Call<List<Crop_Details>> readAllCropDetails();
+
         @GET("crop_detail/recent_crop.php")
         Call<List<Crop_Details>> recent_Crop_Details();
     }

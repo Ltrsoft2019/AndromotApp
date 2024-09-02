@@ -43,7 +43,7 @@ public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.clientImage.setImageResource(R.drawable.ll);
         holder.tvClientName.setText(addClientModelList.get(position).getClient_name_id());
-        holder.tvClientDescription.setText(addClientModelList.get(position).getClient_description());
+        holder.tvClientDescription.setText(addClientModelList.get(position).getClientDescription());
         holder.tvdescription.setText("Description : ");
 
         holder.clientCardView.setOnClickListener(new View.OnClickListener() {

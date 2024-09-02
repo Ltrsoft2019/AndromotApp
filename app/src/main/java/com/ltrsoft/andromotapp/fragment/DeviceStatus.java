@@ -27,26 +27,18 @@ public class DeviceStatus extends Fragment {
     private List<User_Crop_Sensor_Pojo> deviceModelStatusList ;
 
     public DeviceStatus() {
-        // Required empty public constructor
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.device_status, container, false);
 
         btnBackImage = view.findViewById(R.id.btnBackImg);
         deviceModelRecylerView = view.findViewById(R.id.deviceModelRecylerView);
 
         deviceModelRecylerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-
-
-
-
-
-
 
         return view;
     }

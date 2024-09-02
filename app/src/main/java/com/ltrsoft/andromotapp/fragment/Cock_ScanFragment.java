@@ -60,9 +60,9 @@ public class Cock_ScanFragment extends Fragment implements AdapterView.OnItemSel
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cock__scan, container, false);
 
-        barcodeView_of_cock = view.findViewById(R.id.barcode_scanner_of_cock);
+//        barcodeView_of_cock = view.findViewById(R.id.barcode_scanner_of_cock);
         scannedDataTextView_of_cock = view.findViewById(R.id.scanned_data_of_cock);
-        spinnerOfCockScan = view.findViewById(R.id.spinnerOfCockScan);
+//        spinnerOfCockScan = view.findViewById(R.id.spinnerOfCockScan);
         btnNextFromCockScan = view.findViewById(R.id.btnNextFromCockScan);
         btnAddCockScan = view.findViewById(R.id.btnAddClientScan);
         btnBackFromCockScan  = view.findViewById(R.id.btnBackFromCockScan);

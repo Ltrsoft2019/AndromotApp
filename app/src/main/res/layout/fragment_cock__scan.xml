@@ -22,17 +22,17 @@
         android:layout_marginTop="25dp"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerOfCockScan"
-        android:prompt="@string/select_an_option"
+        android:prompt="@string/crop_name"
         />
 
 
     <!-- TextView to display the scanned barcode data -->
 
-    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+   <!-- <com.journeyapps.barcodescanner.DecoratedBarcodeView
         android:id="@+id/barcode_scanner_of_cock"
         android:layout_marginTop="60dp"
         android:layout_width="400dp"
-        android:layout_height="350dp" />
+        android:layout_height="350dp" />-->
 
     <TextView
         android:id="@+id/scanned_data_of_cock"
