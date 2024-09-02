@@ -18,7 +18,7 @@ public interface Cock_List_api {
             @Field("cock_name_id") String cock_name_id ,
             @Field("cock_manufacture_date") int cock_manufacture_date ,
             @Field("cock_status") String  cock_status,
-            @Field(" cock_description") String  cock_description
+            @Field("cock_description") String  cock_description
     );
     @FormUrlEncoded
     @POST("cock_list/update_cock_list.php")
@@ -27,7 +27,7 @@ public interface Cock_List_api {
             @Field("cock_name_id") String cock_name_id ,
             @Field("cock_manufacture_date") int cock_manufacture_date ,
             @Field("cock_status") String  cock_status,
-            @Field(" cock_description") String  cock_description
+            @Field("cock_description") String  cock_description
     );
     @GET("cock_list/read_cock_list.php")
     Call<Cock_List> read_by_id_Cock_List(
