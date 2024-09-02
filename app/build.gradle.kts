@@ -83,4 +83,10 @@ dependencies {
    // apply plugin: ("com.google.gms.google-services")
 
 
+    //for barGarph implementaion
+    implementation ("com.jjoe64:graphview:4.2.2")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.google.android.material:material:1.10.0")
+
+
 }
