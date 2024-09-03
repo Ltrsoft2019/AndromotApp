@@ -1,78 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/back"
-            android:layout_margin="8dp"/>
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:layout_marginTop="10dp"
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <TextView
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="0dp"
-            android:padding="5dp"
-            android:text="Notification"
-            android:textSize="18dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        android:layout_height="50dp"
+        app:cardBackgroundColor="#C9FBC5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
 
-        <Switch
-            android:id="@+id/notification_switch"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:layout_marginRight="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"
+            android:text="Setting"
+            android:textColor="@color/black"
+            android:textSize="26dp"
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:background="@drawable/bordersetting"
+        android:queryHint="Search Setting"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.107" />
 
-        android:layout_height="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
         <LinearLayout
-            android:id="@+id/language_card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="65dp"
+                android:layout_height="44dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.072"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cardView"
+                app:layout_constraintVertical_bias="0.221"
+                app:srcCompat="@drawable/privacy_copy" />
+
             <TextView
-                android:paddingLeft="10dp"
-                android:layout_marginLeft="10dp"
-                android:padding="5dp"
-                android:text="Languages"
-                android:textSize="18dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:id="@+id/tv_acccount_privacy"
+                android:layout_width="257dp"
+                android:layout_height="43dp"
+                android:text="Account Privacy"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.222" />
 
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+
         <TextView
-            android:id="@+id/contact_tv"
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_acccount_setting"
+            android:layout_width="257dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="18dp"
+            android:text="Account Setting"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintVertical_bias="0.296" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="360dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="25dp"
+        android:foregroundGravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
-            android:text="Contact Us"
-            android:textColor="#0C75BB"
-            android:textSize="18dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.167"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.409"
+            app:srcCompat="@drawable/password" />
+
+        <TextView
+            android:id="@+id/tv_pass_and_security"
+            android:layout_width="257dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="48dp"
+            android:text="Password and security"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.41" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.167"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.459"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/tv_personal_details"
+            android:layout_width="257dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="48dp"
+            android:text="Personal details"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.459" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/ibutton"
+            android:layout_marginTop="90dp"
+            android:paddingLeft="5dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_your_info"
+            android:layout_width="257dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="90dp"
+            android:paddingLeft="48dp"
+            android:text="Your information"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" />
     </androidx.cardview.widget.CardView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+        <TextView
+            android:id="@+id/tv_theme"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:text="Theme"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.626" />
 
+        <TextView
+            android:id="@+id/tv_Languages"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:text="Languages"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.662" />
+
+        <TextView
+            android:id="@+id/tv_Help"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:text="Help"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.698" />
+
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:text="About"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.734" />
+
+
+        <TextView
+            android:id="@+id/tv_add_account"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Add Account"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.435"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.853" />
+
+        <Button
+            android:id="@+id/tv_login"
+            android:paddingTop="1dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="Log in"
+            android:textColor="#00FF40"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_logout_all"
+            android:layout_width="257dp"
+            android:layout_height="30dp"
+            android:text="Log out all account"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.435"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.932" />
+
+        <Button
+            android:id="@+id/tv_logout"
+            android:paddingTop="1dp"
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:text="Log out"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 
 </LinearLayout>
