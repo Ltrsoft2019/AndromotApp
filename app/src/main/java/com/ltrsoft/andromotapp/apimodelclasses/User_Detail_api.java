@@ -17,32 +17,32 @@ public interface User_Detail_api {
     @POST("user_detail/create_user_detail.php")
     Call<User_Detail> create_User_Detail(
             @Field("user_fname") String user_fname,
-            @Field(" user_mname") String  user_mname,
+            @Field(" user_mname") String user_mname,
             @Field("user_lname") String user_lname,
             @Field("email_id") String email_id,
-            @Field("user_phone") int user_phone,
+            @Field("user_address") String user_address,
+            @Field("user_phone") String user_phone,
             @Field("state") String state,
-            @Field("city") String  city,
-            @Field(" country") String   country,
-            @Field("district") String  district,
-            @Field("user_image") int user_image
-
+            @Field("city") String city,
+            @Field(" country") String country,
+            //@Field("user_image") String user_image
+            @Field("district") String district
     );
     @FormUrlEncoded
     @POST("user_detail/update_user_detail.php")
     Call<User_Detail> update_User_Detail(
             @Field("user_id") int user_id,
             @Field("user_fname") String user_fname,
-            @Field(" user_mname") String  user_mname,
+            @Field(" user_mname") String user_mname,
             @Field("user_lname") String user_lname,
             @Field("email_id") String email_id,
-            @Field("user_phone") int user_phone,
+            @Field("user_phone") String user_phone,
             @Field("state") String state,
-            @Field("city") String  city,
-            @Field(" country") String   country,
-            @Field("district") String  district,
-            @Field("user_address") String user_address,
-            @Field("user_image") int user_image
+            @Field("city") String city,
+            @Field(" country") String country,
+            @Field("district") String district,
+            // @Field("user_image") String user_image
+            @Field("user_address") String user_address
 
     );
     @FormUrlEncoded

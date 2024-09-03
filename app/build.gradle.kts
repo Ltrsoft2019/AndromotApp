@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -48,6 +49,7 @@ dependencies {
 
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation ("com.google.firebase:firebase-analytics:21.3.0")
 
 
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
@@ -65,7 +67,26 @@ dependencies {
     implementation("com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0")
 
 
+    implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
+    implementation ("com.google.zxing:core:3.3.0")
 
+
+
+   /* implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")*/
+
+    /*implementation ("com.androidplot:androidplot-core:1.5.8")*/
+
+   // implementation ("com.jjoe64:graphview:4.2.2")
+
+   // implementation ("com.anychart:anychart-android:1.1.2")
+
+   // apply plugin: ("com.google.gms.google-services")
+
+
+    //for barGarph implementaion
+    implementation ("com.jjoe64:graphview:4.2.2")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
+    implementation ("com.google.android.material:material:1.10.0")
 
 
 }

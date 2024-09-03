@@ -50,11 +50,16 @@
         );
 */
         @GET("crop_detail/id_crop_detail.php")
-        Call<List<Crop_Details>> read_by_id_Crop_Details(@Query("crop_id") int crop_id);
+        Call<List<Crop_Details>> read_by_id_Crop_Details(
+                @Query("crop_id") int crop_id
+        );
 
 
         @GET("crop_detail/read_crop_detail.php")
         Call<List<Crop_Details>> read_Crop_Details();
+
+        @POST("crop_detail/readall_crop_detail.php")
+        Call<List<Crop_Details>> readAllCropDetails();
 
         @GET("crop_detail/recent_crop.php")
         Call<List<Crop_Details>> recent_Crop_Details();

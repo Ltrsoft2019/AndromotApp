@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
-        android:title="home"
+        android:id="@+id/bottomHome"
+        android:title="@string/home"
         android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/add"
-        android:title="Add Crop"
+        android:id="@+id/bottomAddCrop"
+        android:title="@string/add_crop1"
         android:icon="@drawable/baseline_add_circle_outline_24"/>
     <item
-        android:id="@+id/status"
-        android:title="Status"
+        android:id="@+id/bottomStatus"
+        android:title="@string/status"
         android:icon="@drawable/baseline_add_card_24"/>
     <item
-        android:id="@+id/currentcrop"
-        android:title="Current Corp"
+        android:id="@+id/bottomCurrentCrop"
+        android:title="@string/current_corp"
         android:icon="@drawable/crop"/>
 </menu>

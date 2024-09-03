@@ -7,6 +7,8 @@ import android.os.Handler;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ltrsoft.andromotapp.fragment.Login;
+
 public class SplashScreen extends AppCompatActivity {
 
     private static final long SPLASH_DURATION = 3000;
@@ -16,6 +18,8 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_splash_screen);
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

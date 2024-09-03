@@ -1,6 +1,7 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
 public class User_Crop_Sensor_Pojo {
+
     String user_id,crop_id,crop_name,date_ucs,sensor_status,sensor_name_id,sensor_value,crop_image,sensor_list_id,threshold_value,description,user_crop_sensor_id;
 
     public User_Crop_Sensor_Pojo(String user_id, String crop_id, String crop_name, String sensor_status, String sensor_name_id,String sensor_value,
@@ -17,6 +18,15 @@ public class User_Crop_Sensor_Pojo {
         this.crop_image = crop_image;
         this.date_ucs = date_ucs;
         this.user_crop_sensor_id = user_crop_sensor_id;
+    }
+
+    //This constructor made for device model status recycler view
+
+    public User_Crop_Sensor_Pojo(String sensor_name_id , String crop_name , String sensor_status)
+    {
+        this.crop_name = crop_name;
+        this.sensor_name_id = sensor_name_id;
+        this.sensor_status = sensor_status;
     }
 
     public String getUser_id() {

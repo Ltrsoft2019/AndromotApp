@@ -8,92 +8,49 @@
 
     <!-- Back Button -->
     <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:id="@+id/btnBackImg"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/back" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_arrow_back_ios_24" />
 
     <!-- Title -->
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/tvServerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/btnBackImg"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
         android:text="Servers :"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="31sp"
         android:textStyle="bold" />
 
     <!-- Server Card -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/serverCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleText"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/serverRecyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tvServerTitle"
+       android:layout_marginTop="20dp"
+       />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
 
-            <!-- Circle with S -->
-            <ImageView
-                android:id="@+id/serverImage"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/circle_green"
-                android:contentDescription="Server Image"
-                android:padding="8dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/server" />
-
-            <!-- Server Name -->
-            <TextView
-                android:id="@+id/serverName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/serverImage"
-                android:layout_marginStart="16dp"
-                android:text="Sever 1 :"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- Description -->
-            <TextView
-                android:id="@+id/serverDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/serverName"
-                android:layout_toEndOf="@id/serverImage"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:text="Connect multiple clients with server which will provide details."
-                android:textColor="#000000"
-                android:textSize="14sp" />
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
     <!-- Add Button -->
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/serverCard"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#4CAF50"
-        android:text="Add"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddServer"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/baseline_add_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"/>
+
 
 </RelativeLayout>

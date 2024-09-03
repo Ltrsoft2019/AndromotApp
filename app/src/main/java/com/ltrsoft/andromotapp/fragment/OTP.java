@@ -1,5 +1,8 @@
 package com.ltrsoft.andromotapp.fragment;
 
+
+import static java.util.ResourceBundle.getBundle;
+
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -60,14 +63,11 @@ public class OTP extends Fragment {
             verificationId = bundle.getString("verificationId");
             textmobile2.setText(String.format("+91%s", mobileNumber));
         }
-
-        sendotpInput();
-
         btnverify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main,new NavigationDrawer()).addToBackStack(null).commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main, new NavigationDrawerFragment()).addToBackStack(null).commit();
 
                 if (inputcode1.getText().toString().trim().isEmpty()
                         || inputcode2.getText().toString().trim().isEmpty()
@@ -97,7 +97,7 @@ public class OTP extends Fragment {
                             if (task.isSuccessful()) {
                                 // Replace with your main activity navigation
                                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                                transaction.replace(R.id.main, new NavigationDrawer());
+                                transaction.replace(R.id.main, new NavigationDrawerFragment());
                                 transaction.addToBackStack(null);
                                 transaction.commit();
                             } else {
@@ -106,53 +106,146 @@ public class OTP extends Fragment {
                         }
                     });
 
-                    resendotp.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            PhoneAuthProvider.getInstance().verifyPhoneNumber("+91" + mobileNumber,
-                                    60, TimeUnit.SECONDS, getActivity(), new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-                                        @Override
-                                        public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-                                            Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-                                        }
 
-                                        @Override
-                                        public void onVerificationFailed(@NonNull FirebaseException e) {
-                                            Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                        }
-                    });
                 }
             }
         });
+        numbermove();
+
+        resendotp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                        "+91" + bundle.getString("mobile"),
+                        60, TimeUnit.SECONDS,
+                        getActivity(),
+
+                        new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                            @Override
+                            public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
+
+                            }
+
+                            @Override
+                            public void onVerificationFailed(@NonNull FirebaseException e) {
+
+                            }
+
+                            @Override
+                            public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                                verificationId=s;
+                            }
+                        }
+                );
+
+            }
+        });
+
 
         return view;
     }
 
-    private void sendotpInput() {
-        EditText[] editText = {inputcode1, inputcode2, inputcode3, inputcode4, inputcode5, inputcode6};
+    private void numbermove() {
+        inputcode1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        for (int i = 0; i < editText.length; i++) {
-            int index = i;
-            editText[i].addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                }
+            }
 
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    if (!s.toString().isEmpty()) {
-                        if (index < editText.length - 1) {
-                            editText[index + 1].requestFocus();
-                        }
-                    }
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!s.toString().trim().isEmpty())
+                {
+                    inputcode2.requestFocus();
                 }
+            }
 
-                @Override
-                public void afterTextChanged(Editable s) {
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputcode2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!s.toString().trim().isEmpty())
+                {
+                    inputcode3.requestFocus();
                 }
-            });
-        }
-    }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputcode3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!s.toString().trim().isEmpty())
+                {
+                    inputcode4.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputcode4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!s.toString().trim().isEmpty())
+                {
+                    inputcode5.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        inputcode5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!s.toString().trim().isEmpty())
+                {
+                    inputcode6.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+     });
+
+}
+
 }

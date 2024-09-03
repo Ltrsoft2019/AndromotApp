@@ -13,15 +13,15 @@ import retrofit2.http.POST;
 
 public interface Server_List_api {
     @FormUrlEncoded
-    @POST("create_server_list.php")
+    @POST("server_list/create_server_list.php")
     Call<Server_List> create_Server_List(
-            @Field("server_manufacture_date") int server_manufacture_date,
+            @Field("server_manufacture_date") String  server_manufacture_date,
             @Field("server_name_id") String  server_name_id,
             @Field("server_status") String server_status,
             @Field("server_description") String server_description
     );
     @FormUrlEncoded
-    @POST("update_server_list.php")
+    @POST("server_list/update_server_list.php")
     Call<Server_List> update_Server_List(
             @Field("server_id") int server_id,
             @Field("user_id") int user_id,
@@ -30,14 +30,14 @@ public interface Server_List_api {
             @Field("server_status") String server_status,
             @Field("server_description") String server_description
     );
-    @GET("read_by_user.php")
+    @GET("server_list/read_by_user.php")
     Call<Server_List> read_by_id_Server_List(
             @Field("server_id") int server_id    );
 
-    @GET("read_server_list.php")
+    @GET("server_list/read_server_list.php")
     Call<List<Server_List>> readall_Server_List();
 
-    @POST("delete_server_list.php")
+    @POST("server_list/delete_server_list.php")
     Call<Server_List> delete_Server_List(
             @Field("server_id") int server_id
     );

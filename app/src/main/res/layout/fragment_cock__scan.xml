@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.Cock_ScanFragment">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBackFromCockScan"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Server"/>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerOfCockScan"
+        android:prompt="@string/crop_name"
+        />
+
+
+    <!-- TextView to display the scanned barcode data -->
+
+   <!-- <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner_of_cock"
+        android:layout_marginTop="60dp"
+        android:layout_width="400dp"
+        android:layout_height="350dp" />-->
+
+    <TextView
+        android:id="@+id/scanned_data_of_cock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:hint="response"
+        android:layout_marginTop="50dp"
+        /> <!-- Initially hidden    -->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Cock"
+        android:layout_gravity="center"
+        android:id="@+id/btnAddClientScan"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="center"
+        android:id="@+id/btnNextFromCockScan"/>
+
+</LinearLayout>
