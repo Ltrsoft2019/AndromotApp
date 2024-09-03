@@ -1,56 +1,81 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import retrofit2.http.Field;
 
 public class Client_List {
 
+        @SerializedName("client_id")
+        @Expose
+        private int clientId;
 
-    private int client_id;
-    @SerializedName("client_name_id")
-    private String  client_name_id;
-    @SerializedName("client_manufacture_date")
-    private String client_manufacture_date;
-    @SerializedName("client_description")
-    private String client_description;
+        @SerializedName("client_name_id")
+        @Expose
+        private String clientNameId;
 
-    public Client_List(int client_id, String client_name_id, String client_manufacture_date, String client_description) {
-        this.client_id = client_id;
-        this.client_name_id = client_name_id;
-        this.client_manufacture_date = client_manufacture_date;
-        this.client_description = client_description;
+        @SerializedName("client_manufacture_date")
+        @Expose
+        private String clientManufactureDate;
+
+        @SerializedName("client_status")
+        @Expose
+        private String clientStatus;
+
+        @SerializedName("client_description")
+        @Expose
+        private String clientDescription;
+
+    public Client_List(int clientId, String clientNameId, String clientManufactureDate, String clientStatus, String clientDescription) {
+        this.clientId = clientId;
+        this.clientNameId = clientNameId;
+        this.clientManufactureDate = clientManufactureDate;
+        this.clientStatus = clientStatus;
+        this.clientDescription = clientDescription;
     }
 
-    public int getClient_id() {
-        return client_id;
+    public int getClientId() {
+        return clientId;
     }
 
-    public void setClient_id(int client_id) {
-        this.client_id = client_id;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getClientNameId() {
+        return clientNameId;
+    }
+
+    public void setClientNameId(String clientNameId) {
+        this.clientNameId = clientNameId;
+    }
+
+    public String getClientManufactureDate() {
+        return clientManufactureDate;
+    }
+
+    public void setClientManufactureDate(String clientManufactureDate) {
+        this.clientManufactureDate = clientManufactureDate;
+    }
+
+    public String getClientStatus() {
+        return clientStatus;
+    }
+
+    public void setClientStatus(String clientStatus) {
+        this.clientStatus = clientStatus;
+    }
+
+    public String getClientDescription() {
+        return clientDescription;
+    }
+
+    public void setClientDescription(String clientDescription) {
+        this.clientDescription = clientDescription;
     }
 
     public String  getClient_name_id() {
-        return client_name_id;
-    }
-
-    public void setClient_name_id(String  client_name_id) {
-        this.client_name_id = client_name_id;
-    }
-
-    public String getClient_manufacture_date() {
-        return client_manufacture_date;
-    }
-
-    public void setClient_manufacture_date(String client_manufacture_date) {
-        this.client_manufacture_date = client_manufacture_date;
-    }
-
-    public String getClient_description() {
-        return client_description;
-    }
-
-    public void setClient_description(String client_description) {
-        this.client_description = client_description;
+        return clientNameId;
     }
 }

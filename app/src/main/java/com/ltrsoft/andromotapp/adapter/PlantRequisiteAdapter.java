@@ -16,6 +16,7 @@ import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PlantRequisiteAdapter extends RecyclerView.Adapter<PlantRequisiteAdapter.ViewHolder> {
 
@@ -23,12 +24,12 @@ public class PlantRequisiteAdapter extends RecyclerView.Adapter<PlantRequisiteAd
     //This adapter class made for plant requisite recycler view...
 
     private Context context;
-    private ArrayList<Crop_Details> cropSugModelArrayList;
+    private List<Crop_Details> plantRqModelList;
 
-    public PlantRequisiteAdapter(Context context , ArrayList<Crop_Details> cropSugModelArrayList)
+    public PlantRequisiteAdapter(Context context , List<Crop_Details> plantRqModelList)
     {
         this.context = context;
-        this.cropSugModelArrayList = cropSugModelArrayList;
+        this.plantRqModelList = plantRqModelList;
     }
 
 
@@ -41,8 +42,8 @@ public class PlantRequisiteAdapter extends RecyclerView.Adapter<PlantRequisiteAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //holder.cropImage.setImageResource(cropSugModelArrayList.get(position).getCrop_image());
-        holder.tvCropName.setText(cropSugModelArrayList.get(position).getCrop_name());
-        holder.tvDeviceName.setText(cropSugModelArrayList.get(position).getDevice_name());
+        holder.tvCropName.setText(plantRqModelList.get(position).getCrop_name());
+        holder.tvDeviceName.setText(plantRqModelList.get(position).getDevice_name());
         holder.tvStatus.setText("Ready");
 
         holder.plant_card.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +56,7 @@ public class PlantRequisiteAdapter extends RecyclerView.Adapter<PlantRequisiteAd
 
     @Override
     public int getItemCount() {
-        return cropSugModelArrayList.size();
+        return plantRqModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

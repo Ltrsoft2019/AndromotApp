@@ -40,7 +40,7 @@ public class Settings extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationDrawer navigationDrawer = new NavigationDrawer();
+                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main,navigationDrawer).commit();
             }
         });

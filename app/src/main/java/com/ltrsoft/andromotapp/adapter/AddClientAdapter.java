@@ -20,7 +20,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.ViewHolder> {
+public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.ViewHolder>   {
 
     //This adapter class made for add client recycler view in user appliction
 
@@ -43,8 +43,9 @@ public class AddClientAdapter extends RecyclerView.Adapter<AddClientAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.clientImage.setImageResource(R.drawable.ll);
         holder.tvClientName.setText(addClientModelList.get(position).getClient_name_id());
-        holder.tvClientDescription.setText(addClientModelList.get(position).getClient_description());
+        holder.tvClientDescription.setText(addClientModelList.get(position).getClientDescription());
         holder.tvdescription.setText("Description : ");
+
         holder.clientCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

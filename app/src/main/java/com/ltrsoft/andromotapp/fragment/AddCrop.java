@@ -72,4 +72,10 @@ public class AddCrop extends Fragment {
 
         return view;
     }
+
+
+    public void loadFrgmentAdapter(Fragment fragment){
+
+        getChildFragmentManager().beginTransaction().replace(R.id.dashboardFrame ,fragment).addToBackStack(null).commit();
+    }
 }

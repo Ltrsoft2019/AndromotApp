@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String BASE_URL = "https://andromot.ltr-soft.com/public/andromot/";
+    private static final String BASE_URL = "https://andromot.ltr-soft.com/andromot/";
     private static Retrofit retrofit;
 
 public static Retrofit getRetrofitInstance(){

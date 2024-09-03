@@ -26,7 +26,7 @@ public class RegisterPage extends Fragment {
     private ImageView back,newUserprofileImage;
     private EditText userFirstName,userMiddleName,userLastName,userEmail,userPhone,userAddress,userCountry,userState,userDistrict,userCity;
     private Button btnRegister;
-    private String user_fname,user_mname,user_lname,Email,user_phone,user_address,country,state,district,city;
+    private String user_fname,user_mname,user_lname,email_id,user_phone,user_address,country,state,district,city;
 
 
     public RegisterPage() {
@@ -42,7 +42,7 @@ public class RegisterPage extends Fragment {
         userFirstName = view.findViewById(R.id.firstNameReg);
         userMiddleName = view.findViewById(R.id.middleNameReg);
         userLastName = view.findViewById(R.id.lastNameReg);
-        // userEmail = view.findViewById(R.id.emailReg);
+        userEmail = view.findViewById(R.id.emailReg);
         userPhone = view.findViewById(R.id.phoneReg);
         userAddress = view.findViewById(R.id.addressReg);
         userCity = view.findViewById(R.id.cityReg);
@@ -60,7 +60,7 @@ public class RegisterPage extends Fragment {
                 user_fname = userFirstName.getText().toString();
                 user_mname = userMiddleName.getText().toString();
                 user_lname = userLastName.getText().toString();
-                //Email = userEmail.getText().toString();  //not available in db
+                email_id = userEmail.getText().toString();
                 user_phone = userPhone.getText().toString();
                 user_address = userAddress.getText().toString();
                 city = userCity.getText().toString();
@@ -68,7 +68,7 @@ public class RegisterPage extends Fragment {
                 state = userState.getText().toString();
                 district = userDistrict.getText().toString();
 
-                getUserRegister(user_fname,user_mname,user_lname,user_address,user_phone,country,city,state,district);
+                getUserRegister(user_fname,user_mname,user_lname,email_id,user_address,user_phone,country,city,state,district);
 
             }
         });
@@ -77,13 +77,13 @@ public class RegisterPage extends Fragment {
         return view;
     }
 
-    private void getUserRegister(String user_fname, String user_mname, String user_lname, String user_phone, String user_address,
+    private void getUserRegister(String user_fname, String user_mname, String user_lname,String email_id, String user_phone, String user_address,
                                  String country, String city, String state, String district) {
 
 
         User_Detail_api api = RetrofitClient.getRetrofitInstance().create(User_Detail_api.class);
 
-        Call<User_Detail> call = api.create_User_Detail(user_fname,user_mname,user_lname,user_address,user_phone,state,city,country,district);
+        Call<User_Detail> call = api.create_User_Detail(user_fname,user_mname,user_lname,email_id,user_address,user_phone,state,city,country,district);
 
         call.enqueue(new Callback<User_Detail>() {
             @Override

@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         android:background="#50AD98"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/button_nevigation_menu"
-
+        app:menu="@menu/bottom_nevigation_menu"
         />
 <!--    #50AD98-->
 
+    <!--This frame layout take for load different fragment-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container"
-        android:layout_above="@+id/bottomNavigationView"/>
+        android:id="@+id/dashboardFrame"
+        android:layout_marginBottom="?attr/actionBarSize"/>
 
 </RelativeLayout>

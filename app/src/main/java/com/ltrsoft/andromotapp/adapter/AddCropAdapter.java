@@ -10,9 +10,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ltrsoft.andromotapp.R;
+import com.ltrsoft.andromotapp.fragment.AddCrop;
+import com.ltrsoft.andromotapp.fragment.AddCrop_Detail;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
 import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
@@ -23,7 +27,7 @@ import java.util.List;
 public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHolder> {
 
 
-    //This model class made for add crop recycler view for user application
+    //This model class made for "AddCrop" recycler view for user application
 
     private Context context;
     private List<Crop_Details> addCropModelList ;
@@ -46,24 +50,21 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
 
         Crop_Details cropDetails = addCropModelList.get(position);
 
-
+//        holder.addCropImage.setImageResource();
         holder.tvAddCropName.setText(addCropModelList.get(position).getCrop_name());
         holder.tvAddCropDescription.setText(addCropModelList.get(position).getDescription());
-        //holder.required_threshold_value.setText(addCropModelList.get(position).getRequired_threshold_value());
 
-
-
-        //commented for testing
-       /* holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
+        holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Add crop next page`", Toast.LENGTH_SHORT).show();
+                AddCrop addCrop = new AddCrop();
+                addCrop.loadFrgmentAdapter(new AddCrop_Detail());
             }
-        });*/
+        });
         // Load crop image using Picasso
 
 
-        String imageUrl = "https://andromot.ltr-soft.com/public/andromot/inputfiles/"+ cropDetails.getCrop_image();
+        String imageUrl = "https://andromot.ltr-soft.com/andromot/inputfiles/"+ cropDetails.getCrop_image();
         Picasso.get().load(imageUrl).into(holder.addCropImage);
 
         Picasso.get()
@@ -96,9 +97,10 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
             addCropImage = mView.findViewById(R.id.addCropImage);
             tvAddCropName = mView.findViewById(R.id.tvAddCropName);
             tvAddCropDescription = mView.findViewById(R.id.tvAddCropDescription);
-            //required_threshold_value = mView.findViewById(R.id.required_threshold_value);
-            //addCrop_card = itemView.findViewById(R.id.addCrop_card);
+            addCrop_card = itemView.findViewById(R.id.addCrop_card);
         }
     }
+
+
 
 }

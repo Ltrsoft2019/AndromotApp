@@ -1,11 +1,8 @@
 package com.ltrsoft.andromotapp.fragment;
 
 
-import static android.content.Intent.getIntent;
-
 import static java.util.ResourceBundle.getBundle;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -70,7 +67,7 @@ public class OTP extends Fragment {
             @Override
             public void onClick(View v) {
 
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main, new NavigationDrawer()).addToBackStack(null).commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main, new NavigationDrawerFragment()).addToBackStack(null).commit();
 
                 if (inputcode1.getText().toString().trim().isEmpty()
                         || inputcode2.getText().toString().trim().isEmpty()
@@ -100,7 +97,7 @@ public class OTP extends Fragment {
                             if (task.isSuccessful()) {
                                 // Replace with your main activity navigation
                                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                                transaction.replace(R.id.main, new NavigationDrawer());
+                                transaction.replace(R.id.main, new NavigationDrawerFragment());
                                 transaction.addToBackStack(null);
                                 transaction.commit();
                             } else {

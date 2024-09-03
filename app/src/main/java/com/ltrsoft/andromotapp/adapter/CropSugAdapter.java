@@ -16,18 +16,19 @@ import com.ltrsoft.andromotapp.R;
 import com.ltrsoft.andromotapp.pojoclasses.Crop_Details;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CropSugAdapter extends RecyclerView.Adapter<CropSugAdapter.ViewHolder> {
 
     //This adapter class made for "Crop Suggestion" Recyler View.
 
     private Context context;
-    private ArrayList<Crop_Details> cropModelArrayList;
+    private List<Crop_Details> cropModelList;
 
-    public CropSugAdapter(Context context , ArrayList<Crop_Details> cropSugModelArrayList)
+    public CropSugAdapter(Context context , List<Crop_Details> cropSugModelList)
     {
         this.context = context;
-        this.cropModelArrayList = cropSugModelArrayList;
+        this.cropModelList = cropSugModelList;
     }
 
     @NonNull
@@ -38,9 +39,9 @@ public class CropSugAdapter extends RecyclerView.Adapter<CropSugAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-       // holder.cropImage.setImageResource(cropModelArrayList.get(position).getCrop_image());
-        holder.tvCropName.setText(cropModelArrayList.get(position).getCrop_name());
-        holder.tvDeviceName.setText(cropModelArrayList.get(position).getDevice_name());
+//        holder.cropImage.setImageResource(cropModelList.get(position).getCrop_image());
+        holder.tvCropName.setText(cropModelList.get(position).getCrop_name());
+        holder.tvDeviceName.setText(cropModelList.get(position).getDevice_name());
         holder.cropSuggestion_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +52,7 @@ public class CropSugAdapter extends RecyclerView.Adapter<CropSugAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return cropModelArrayList.size();
+        return cropModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

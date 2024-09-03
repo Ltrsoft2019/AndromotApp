@@ -1,6 +1,7 @@
 package com.ltrsoft.andromotapp.pojoclasses;
 
 public class User_Crop_Sensor_Pojo {
+
     String user_id,crop_id,crop_name,date_ucs,sensor_status,sensor_name_id,sensor_value,crop_image,sensor_list_id,threshold_value,description,user_crop_sensor_id;
 
     public User_Crop_Sensor_Pojo(String user_id, String crop_id, String crop_name, String sensor_status, String sensor_name_id,String sensor_value,
