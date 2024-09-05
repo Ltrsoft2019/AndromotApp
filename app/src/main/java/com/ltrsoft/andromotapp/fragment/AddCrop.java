@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,7 +31,7 @@ public class AddCrop extends Fragment {
     private ImageView btnBackImg;
     private RecyclerView addCropRecylerView;
     private List<Crop_Details> addCropList ;
-
+    Toolbar toolbar;
     public AddCrop() {
         // Required empty public constructor
     }
@@ -74,8 +75,5 @@ public class AddCrop extends Fragment {
     }
 
 
-    public void loadFrgmentAdapter(Fragment fragment){
 
-        getChildFragmentManager().beginTransaction().replace(R.id.dashboardFrame ,fragment).addToBackStack(null).commit();
-    }
 }

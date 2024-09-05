@@ -36,16 +36,16 @@ public class Settings extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.settings, container, false);
-        back=view.findViewById(R.id.back);
+//        back=view.findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main,navigationDrawer).commit();
+//                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
+//                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main,navigationDrawer).commit();
             }
         });
 
-        notification_switch = view.findViewById(R.id.notification_switch);
+//        notification_switch = view.findViewById(R.id.notification_switch);
 
 
         notification_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

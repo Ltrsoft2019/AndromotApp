@@ -60,9 +60,9 @@ public class Profile extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction().replace(R.id.main,navigationDrawer).commit();
+//                NavigationDrawerFragment navigationDrawer = new NavigationDrawerFragment();
+//                getActivity().getSupportFragmentManager()
+//                        .beginTransaction().replace(R.id.main,navigationDrawer).commit();
             }
         });
 

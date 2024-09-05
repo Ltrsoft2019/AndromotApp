@@ -47,4 +47,10 @@
     <string name="status">Status</string>
     <string name="current_corp">Current Corp</string>
     <string name="notification">Notification</string>
+    <string name="ig">ig</string>
+    <string name="water_level_n_amp_nnpk_detai"><![CDATA[Water Level\n & \nNPK Detai]]></string>
+    <string name="bell">bell</string>
+    <string name="npk">NPK</string>
+    <string name="crop_suggestion">Crop Suggestion</string>
+    <string name="plant_requisite">Plant Requisite</string>
 </resources>

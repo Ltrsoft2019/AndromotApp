@@ -57,8 +57,7 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
         holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AddCrop addCrop = new AddCrop();
-                addCrop.loadFrgmentAdapter(new AddCrop_Detail());
+
             }
         });
         // Load crop image using Picasso
