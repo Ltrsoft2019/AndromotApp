@@ -28,7 +28,7 @@
     <string name="product_ids">Product Id</string>
     <string name="customer_name">Customer Name</string>
     <string name="service_id">Service Id</string>
-    <string name="status_on_of">Status ON/OF :</string>
+    <string name="status_on_of">Status :</string>
     <string name="device_modal_status">Device Modal Status :</string>
     <string name="back_button_image">Back Button Image</string>
     <string name="add_crop">Add Crop :</string>
@@ -53,4 +53,6 @@
     <string name="npk">NPK</string>
     <string name="crop_suggestion">Crop Suggestion</string>
     <string name="plant_requisite">Plant Requisite</string>
+    <string name="device_model_status">Device Model Status :</string>
+    <string name="sensor_id">Sensor Id</string>
 </resources>

@@ -26,9 +26,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddCrop extends Fragment {
+public class AddCrop extends Fragment implements View.OnClickListener{
 
-    private ImageView btnBackImg;
     private RecyclerView addCropRecylerView;
     private List<Crop_Details> addCropList ;
     Toolbar toolbar;
@@ -40,7 +39,6 @@ public class AddCrop extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.add_crop, container, false);
 
-        btnBackImg = view.findViewById(R.id.btnBackImgAddCrop);
         addCropRecylerView = view.findViewById(R.id.addCropRecylerView);
 
         addCropRecylerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -78,4 +76,12 @@ public class AddCrop extends Fragment {
     }
 
 
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+//        if(id == R.id.btnBackImgAddCrop){
+//            getChildFragmentManager().beginTransaction().replace(R.id.frameLayout , new DashboardFragment()).addToBackStack(null).commit();
+//        }
+    }
 }

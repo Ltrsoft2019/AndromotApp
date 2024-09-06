@@ -6,15 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/btnBackImgAddCrop"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/back_button_image"
-        android:src="@drawable/baseline_arrow_back_ios_24"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        />
+
 
     <TextView
         android:id="@+id/addCrop"
@@ -25,7 +17,7 @@
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
-        android:layout_toEndOf="@id/btnBackImgAddCrop"/>
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/addCropRecylerView"
