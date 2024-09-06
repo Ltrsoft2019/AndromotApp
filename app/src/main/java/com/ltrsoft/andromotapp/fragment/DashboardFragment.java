@@ -28,10 +28,11 @@ public class DashboardFragment extends Fragment {
 
     private static final String ROOT_FRAGMENT_TAG = "Dashboard";
 
-    DrawerLayout drawerLayout;
+    public static DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
     BottomNavigationView bottomNavigationView;
+    ActionBarDrawerToggle toggle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,7 +45,7 @@ public class DashboardFragment extends Fragment {
         bottomNavigationView = view.findViewById(R.id.bottom_nav);
 
        ((MainActivity)getActivity()).setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(getActivity() , drawerLayout , toolbar , R.string.OpenDrawer , R.string.CloseDrawer);
+         toggle = new ActionBarDrawerToggle(getActivity() , drawerLayout , toolbar , R.string.OpenDrawer , R.string.CloseDrawer);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 

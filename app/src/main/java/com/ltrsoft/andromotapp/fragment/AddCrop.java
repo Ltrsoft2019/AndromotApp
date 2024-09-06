@@ -32,9 +32,7 @@ public class AddCrop extends Fragment {
     private RecyclerView addCropRecylerView;
     private List<Crop_Details> addCropList ;
     Toolbar toolbar;
-    public AddCrop() {
-        // Required empty public constructor
-    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,8 +54,7 @@ public class AddCrop extends Fragment {
 
                 if(response.isSuccessful() && response.body() != null){
 
-                    addCropList = response.body();
-                    addCropRecylerView.setAdapter(new AddCropAdapter(getActivity() , addCropList));
+                    setData(response.body());
 
                     Toast.makeText(getActivity(), "Data successfully fetch", Toast.LENGTH_SHORT).show();
                 }else {
@@ -74,6 +71,11 @@ public class AddCrop extends Fragment {
         return view;
     }
 
+    private void setData(List<Crop_Details> body) {
+        addCropList = body;
+        addCropRecylerView.setAdapter(new AddCropAdapter(getActivity() , addCropList));
+
+    }
 
 
 }

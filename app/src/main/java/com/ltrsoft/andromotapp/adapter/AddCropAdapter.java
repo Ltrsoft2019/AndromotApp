@@ -63,7 +63,7 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
         // Load crop image using Picasso
 
 
-        String imageUrl = "https://andromot.ltr-soft.com/andromot/inputfiles/"+ cropDetails.getCrop_image();
+        String imageUrl = "https://andromot.ltr-soft.com/inputfiles/"+ cropDetails.getCrop_image();
         Picasso.get().load(imageUrl).into(holder.addCropImage);
 
         Picasso.get()

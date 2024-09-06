@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -57,5 +58,14 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.fragment_container,new DashboardFragment());
         fragmentTransaction.commit();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(DashboardFragment.drawerLayout.isDrawerOpen(GravityCompat.START)){
+            DashboardFragment.drawerLayout.closeDrawer(GravityCompat.START);
+        }else {
+            super.onBackPressed();
+        }
     }
 }
