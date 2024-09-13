@@ -7,14 +7,14 @@
     android:background="#D0EBD1"
     android:padding="16dp">
 
-    <!-- Header Row for Back Arrow Icon and Current Crop Details Text -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <!-- Back Arrow Icon -->
+
         <ImageView
             android:id="@+id/backArrow"
             android:layout_width="24dp"
