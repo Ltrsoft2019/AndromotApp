@@ -57,14 +57,13 @@ public class AddCropAdapter extends RecyclerView.Adapter<AddCropAdapter.ViewHold
         holder.addCrop_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AddCrop addCrop = new AddCrop();
-                addCrop.loadFrgmentAdapter(new AddCrop_Detail());
+
             }
         });
         // Load crop image using Picasso
 
 
-        String imageUrl = "https://andromot.ltr-soft.com/andromot/inputfiles/"+ cropDetails.getCrop_image();
+        String imageUrl = "https://andromot.ltr-soft.com/inputfiles/"+ cropDetails.getCrop_image();
         Picasso.get().load(imageUrl).into(holder.addCropImage);
 
         Picasso.get()

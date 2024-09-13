@@ -1,5 +1,6 @@
 package com.ltrsoft.andromotapp.apimodelclasses;
 
+import com.ltrsoft.andromotapp.pojoclasses.SenseCropNPKModel;
 import com.ltrsoft.andromotapp.pojoclasses.User_Crop_Sensor;
 
 import java.util.List;
@@ -52,4 +53,7 @@ public interface UserCropSensor {
     Call<User_Crop_Sensor> read_by_idUserCropSensor(
             @Field("user_crop_sensor_id") String userCropSensorId
     );
+
+    @POST("user_crop_sensor/read_by_crop_id.php")
+    Call<List<SenseCropNPKModel>> readAllDetailOfCrop();
 }

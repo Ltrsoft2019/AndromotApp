@@ -12,19 +12,21 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ltrsoft.andromotapp.R;
+import com.ltrsoft.andromotapp.pojoclasses.SenseCropNPKModel;
 import com.ltrsoft.andromotapp.pojoclasses.User_Crop_Sensor_Pojo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DeviceModelStatusAdapter extends RecyclerView.Adapter<DeviceModelStatusAdapter.ViewHolder> {
 
     private Context context;
-    private ArrayList<User_Crop_Sensor_Pojo> deviceStatusModelArrayList ;
+    private List<SenseCropNPKModel> deviceStatusModelList ;
 
-    public DeviceModelStatusAdapter(Context context , ArrayList<User_Crop_Sensor_Pojo> deviceStatusModelArrayList)
+    public DeviceModelStatusAdapter(Context context , List<SenseCropNPKModel> deviceStatusModelList)
     {
         this.context = context;
-        this.deviceStatusModelArrayList = deviceStatusModelArrayList;
+        this.deviceStatusModelList = deviceStatusModelList;
     }
     @NonNull
     @Override
@@ -34,9 +36,9 @@ public class DeviceModelStatusAdapter extends RecyclerView.Adapter<DeviceModelSt
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.tvDeviceName.setText(deviceStatusModelArrayList.get(position).getSensor_name_id());
-        holder.tvCropName.setText(deviceStatusModelArrayList.get(position).getCrop_name());
-        holder.tvStatusOnOf.setText(deviceStatusModelArrayList.get(position).getSensor_status());
+        holder.tvDeviceName.setText(deviceStatusModelList.get(position).getClientId());
+        holder.tvCropName.setText(deviceStatusModelList.get(position).getCropName());
+        holder.tvStatusOnOf.setText(deviceStatusModelList.get(position).getClientStatus());
         holder.deviceModel_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +49,7 @@ public class DeviceModelStatusAdapter extends RecyclerView.Adapter<DeviceModelSt
 
     @Override
     public int getItemCount() {
-        return deviceStatusModelArrayList.size();
+        return deviceStatusModelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

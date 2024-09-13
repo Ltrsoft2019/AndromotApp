@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -25,15 +26,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AddCrop extends Fragment {
+public class AddCrop extends Fragment implements View.OnClickListener{
 
-    private ImageView btnBackImg;
     private RecyclerView addCropRecylerView;
     private List<Crop_Details> addCropList ;
+    Toolbar toolbar;
 
-    public AddCrop() {
-        // Required empty public constructor
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,7 +39,6 @@ public class AddCrop extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.add_crop, container, false);
 
-        btnBackImg = view.findViewById(R.id.btnBackImgAddCrop);
         addCropRecylerView = view.findViewById(R.id.addCropRecylerView);
 
         addCropRecylerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -55,8 +52,7 @@ public class AddCrop extends Fragment {
 
                 if(response.isSuccessful() && response.body() != null){
 
-                    addCropList = response.body();
-                    addCropRecylerView.setAdapter(new AddCropAdapter(getActivity() , addCropList));
+                    setData(response.body());
 
                     Toast.makeText(getActivity(), "Data successfully fetch", Toast.LENGTH_SHORT).show();
                 }else {
@@ -73,9 +69,19 @@ public class AddCrop extends Fragment {
         return view;
     }
 
+    private void setData(List<Crop_Details> body) {
+        addCropList = body;
+        addCropRecylerView.setAdapter(new AddCropAdapter(getActivity() , addCropList));
 
-    public void loadFrgmentAdapter(Fragment fragment){
+    }
 
-        getChildFragmentManager().beginTransaction().replace(R.id.dashboardFrame ,fragment).addToBackStack(null).commit();
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+//        if(id == R.id.btnBackImgAddCrop){
+//            getChildFragmentManager().beginTransaction().replace(R.id.frameLayout , new DashboardFragment()).addToBackStack(null).commit();
+//        }
     }
 }
